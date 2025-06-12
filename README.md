@@ -8,7 +8,7 @@ As a user, I want to view a responsive dashboard that shows key metrics like pro
 Subtasks:
 - Design responsive dashboard layout (React)
 - Display total properties monitored in a card
-- Show count of expiring EPCs (next 90 days)
+- Show count of expiring EPCs (next 2 years)
 - Display average EPC rating (letter grade with visual indicator)
 - Show count of watchlists with clickable view
 
@@ -56,7 +56,7 @@ Subtasks:
 As a user, I want to know how many properties I’m monitoring, so that I can track my portfolio size.
 
 Subtasks:
-- Implement `/properties/count` API
+- Implement backend logic to track portfolio
 - Use MongoDB filter for user-specific properties
 - Write unit test for API response
 
@@ -72,7 +72,7 @@ Subtasks:
 As a user, I want to know how many EPC ratings are expiring soon, so that I can renew or take action.
 
 Subtasks:
-- Create `/properties/expiring_soon?days=90` endpoint
+- Implement backend logic to get the expiring soon epcs
 - Use MongoDB date filters
 - Add support for configurable expiry window
 
@@ -88,7 +88,7 @@ Subtasks:
 As a user, I want to see the average EPC rating of my properties, so that I can assess overall energy efficiency.
 
 Subtasks:
-- Implement `/properties/average_epc` API
+- Implement logic to give average EPC rating
 - Calculate average EPC score and convert to grade
 - Return both grade and numeric average
 
@@ -104,7 +104,7 @@ Subtasks:
 As a user, I want to know how many watchlists I’ve created, so that I can manage my tracking lists.
 
 Subtasks:
-- Build `/watchlists/count` endpoint
+- Implement backend logic to watchlist count
 - Filter watchlists by `is_active` and user ID
 - Return total count
 
